@@ -9,9 +9,9 @@ PHP task
 1. used `Composer` for auto loading classes
 2. used `Docker` for the php-cli container
 
-## Application 
+# Application 
 
-1. ###Folder structure 
+1. ##Folder structure 
 
     * **app** - main directory with the application sources
     * **Classes** - directory with the application classes
@@ -24,7 +24,7 @@ PHP task
     * **vendor**  
     composer directory to store packages
  
-2. ###How it works
+2. ##How it works
     
     `public/index.php` accept 2 cli parameters:   
      a) command - available 2 commands: "thread" and "MCP"   
@@ -41,7 +41,7 @@ PHP task
      with the help of system command `pidof` and according to the search result shows related message.
   
      
-3. ###How to test
+3. ##How to test
      
      * **using docker**
         * start php_cli container by executing `start.sh` from the project root   
@@ -58,10 +58,12 @@ PHP task
    
 JS task
 =======
-1. ####How to test
-open in the browser `js.html` located in the `public` folder.
 
-2. ####Description
+1. ##How to test
+
+    open in the browser `js.html` located in the `public` folder.
+
+2. ##Description
 
 * I decided to create a class for each form element
 * used kind of Value object for the form elements' attributes 
