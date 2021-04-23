@@ -5,33 +5,26 @@ Solution:
 
 PHP task
 =======
-### 3'd Party tools
+## 3'd Party tools
 1. used `Composer` for auto loading classes
 2. used `Docker` for the php-cli container
 
-### Application Structure
-1. ####Folder structure
- * **app** - main directory with the application sources
-     * **Classes** - directory with the application classes
-         * **Commands** - directory with the classes related to the `Command Pattern`
-         * **Workers** - directory with the classes which do some "job" 
-     * **Interfaces** - directory with the interfaces
-     * **Resources** - directory with the language/message files 
- * **public**  
+## Application 
+
+1. ###Folder structure 
+
+    * **app** - main directory with the application sources
+    * **Classes** - directory with the application classes
+        * **Commands** - directory with the classes related to the `Command Pattern`
+        * **Workers** - directory with the classes which do some "job" 
+    * **Interfaces** - directory with the interfaces
+    * **Resources** - directory with the language/message files 
+    * **public**  
     directory for the user/client related files
- * **vendor**  
+    * **vendor**  
     composer directory to store packages
-2. ####Description
-    **Architectural solutions** 
-    * Command design pattern
-    * Factory method pattern
-    * mix of Worker and Value object patterns (workers made immutable)
-    * was following SOLID principles
-    * was used Dependency Injection technique
-    * added 2 resource/message files and simple function to work with 
-      them inside Helper (yep helper :) ) just to not hard code messages among the code.  
  
-    **How it works**
+2. ###How it works
     
     `public/index.php` accept 2 cli parameters:   
      a) command - available 2 commands: "thread" and "MCP"   
@@ -46,10 +39,9 @@ PHP task
      
      `MCP` - execute **WorkerCheckStatus** which looking for the process by process title
      with the help of system command `pidof` and according to the search result shows related message.
-     if task would ask to determine process in different ways i would use Strategy design pattern, but
-     this wasn't required so lets follow YAGNI principle.
+  
      
-     **How to test**
+3. ###How to test
      
      * **using docker**
         * start php_cli container by executing `start.sh` from the project root   
@@ -70,7 +62,6 @@ JS task
 open in the browser `js.html` located in the `public` folder.
 
 2. ####Description
-was used JQuery to speed up work with the DOM.  
 
 * I decided to create a class for each form element
 * used kind of Value object for the form elements' attributes 
